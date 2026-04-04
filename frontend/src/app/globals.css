@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-card: #16162e;
+  --bg-elevated: #1c1c36;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(255, 255, 255, 0.13);
+  --text-primary: #f0f0f8;
+  --text-secondary: #8888a8;
+  --text-muted: #55556a;
+  --accent: #00c896;
+  --accent-dim: rgba(0, 200, 150, 0.12);
+  --accent-glow: rgba(0, 200, 150, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::selection {
+  background: rgba(0, 200, 150, 0.25);
+  color: #fff;
+}
+
+/* Force dark styling on all select dropdowns */
+select {
+  background-color: #16162e !important;
+  color: #f0f0f8 !important;
+  color-scheme: dark;
+}
+
+select option {
+  background-color: #1c1c36 !important;
+  color: #f0f0f8 !important;
+  padding: 8px 12px;
+}
+
+select option:hover,
+select option:focus,
+select option:checked {
+  background-color: #00c896 !important;
+  color: #0a0a0f !important;
+}
+
+select {
+  background-color: #16162E !important;
+  color: #F0F0F8 !important;
+  color-scheme: dark;
+}
+
+select option {
+  background-color: #1C1C36 !important;
+  color: #F0F0F8 !important;
+}
+
+@layer components {
+  .card {
+    @apply bg-[#16162E] border border-white/[0.07] rounded-2xl;
+  }
+
+  .card-hover {
+    @apply hover:border-white/[0.13] hover:bg-[#1C1C36] transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-jade-500 text-ink-900 font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-jade-400 active:scale-[0.98] transition-all duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-white/[0.06] text-white/80 font-medium px-5 py-2.5 rounded-xl border border-white/[0.08]
+           hover:bg-white/[0.1] hover:border-white/[0.14] active:scale-[0.98] transition-all duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply text-white/60 font-medium px-4 py-2 rounded-xl
+           hover:text-white/90 hover:bg-white/[0.06] transition-all duration-150;
+  }
+
+  .btn-danger {
+    @apply bg-coral-500/10 text-coral-500 font-medium px-5 py-2.5 rounded-xl border border-coral-500/20
+           hover:bg-coral-500/20 active:scale-[0.98] transition-all duration-150;
+  }
+
+  .input {
+    @apply w-full bg-white/[0.05] border border-white/[0.08] rounded-xl px-4 py-3 text-white
+           placeholder:text-white/30 focus:outline-none focus:border-jade-500/60 focus:bg-white/[0.07]
+           transition-all duration-150;
+    font-family: var(--font-body);
+  }
+
+  .label {
+    @apply text-sm font-medium text-white/50 mb-1.5 block;
+  }
+
+  .badge-pending {
+    @apply bg-amber-100/10 text-amber-500 border border-amber-500/20;
+  }
+
+  .badge-in-progress {
+    @apply bg-sky-100/10 text-sky-500 border border-sky-500/20;
+  }
+
+  .badge-completed {
+    @apply bg-jade-500/10 text-jade-500 border border-jade-500/20;
+  }
+
+  .badge-low {
+    @apply bg-white/5 text-white/40 border border-white/10;
+  }
+  .badge-medium {
+    @apply bg-amber-100/10 text-amber-400 border border-amber-400/20;
+  }
+  .badge-high {
+    @apply bg-coral-100/10 text-coral-500 border border-coral-500/20;
+  }
+}
