@@ -271,28 +271,3 @@ JWT_REFRESH_SECRET="<cryptographically-random-32+-char-string>"
 ```
 
 ---
-
-## Assessment Coverage
-
-| Requirement | Status |
-|-------------|--------|
-| ✅ Node.js + TypeScript backend | Complete |
-| ✅ Prisma ORM + SQL database | Complete |
-| ✅ JWT access + refresh tokens | Complete |
-| ✅ bcrypt password hashing | Complete |
-| ✅ `/auth/register`, `/auth/login`, `/auth/refresh`, `/auth/logout` | Complete |
-| ✅ Full task CRUD endpoints | Complete |
-| ✅ `GET /tasks` with pagination | Complete |
-| ✅ `GET /tasks` with status filtering | Complete |
-| ✅ `GET /tasks` with title search | Complete |
-| ✅ `PATCH /tasks/:id/toggle` | Complete |
-| ✅ Proper HTTP status codes (400, 401, 404, 409) | Complete |
-| ✅ Input validation + error handling | Complete |
-| ✅ Next.js App Router frontend | Complete |
-| ✅ Login + Registration pages | Complete |
-| ✅ Token storage + auto-refresh logic | Complete |
-| ✅ Task dashboard with list | Complete |
-| ✅ Filtering + searching UI | Complete |
-| ✅ Responsive design (mobile + desktop) | Complete |
-| ✅ Add, Edit, Delete, Toggle UI | Complete |
-| ✅ Toast notifications | Complete |
